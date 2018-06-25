@@ -1,12 +1,17 @@
 const PubSub = require('../helpers/pub_sub.js');
-const OutputView = function () {
+const OutPutView = function () {
 };
 
-ResultView.prototype.bindEvents = function () {
+OutPutView.prototype.bindEvents = function () {
   PubSub.subscribe('PrimeChecker:result', (event) => {
     const result = event.detail;
     this.updateView(result);
   })
+};
+
+OutPutView.prototype.updateView = function (result) {
+  const resultElement = document.querySelector('#result');
+//  resultElement.wordCount = ???????
 };
 
 module.exports = OutputView;
