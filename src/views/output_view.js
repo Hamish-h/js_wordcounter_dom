@@ -4,7 +4,10 @@ const OutputView = function () {
 
 };
 
+InputView.prototype.bindEvents = function () {
+  const input = document.querySelector('#text');
 
+};
 
 
 
