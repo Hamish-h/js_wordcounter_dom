@@ -1,7 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
-
 const WordCounter = function (){
-
 }
 
 WordCounter.prototype.bindEvents = function () {
@@ -9,9 +7,9 @@ WordCounter.prototype.bindEvents = function () {
     const inputtedWords = event.detail;
     const result = this.wordsAreCounted(inputtedWords);
     PubSub.publish('WordCounter:result', result);
+    console.log(inputtedWords);
   })
 };
-
 
 WordCounter.prototype.wordsAreCounted = function (text) {
   var words = event.target.files[0];
