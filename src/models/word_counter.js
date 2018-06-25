@@ -7,7 +7,8 @@ const WordCounter = function (){
 WordCounter.prototype.bindEvents = function () {
   PubSub.subscribe('InputView:words-inputted', (event) => {
     const inputtedWords = event.detail;
-    const result = this.
+    const result = this.wordsAreCounted(inputtedWords);
+    PubSub.publish('WordCounter:result', result);
   })
 };
 
