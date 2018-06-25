@@ -15,4 +15,4 @@ WordCounter.prototype.wordsAreCounted = function (text) {
   return text.split(" ").length;
 };
 
-module.exports = PrimeChecker;
+module.exports = WordCounter;
